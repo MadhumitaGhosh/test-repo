@@ -1,0 +1,18 @@
+It’s okay to treat a “Likert Scale” as continuous as an independent (explanatory/predictor) variable in a regression model or a logistic 
+regression model.
+
+1. There is a difference between a “Likert Scale” item (a single 1-5 scale, eg.) and a full Likert Scale , which is composed of multiple items.
+If it is a full Likert Scale, with a combination of multiple items, go ahead and treat it as numerical.
+
+2. If it is a single item, it is probably fine to treat it as numerical.  There is more justification for this if it has 7 or more values, but 
+even with 5 you may be okay.
+
+3. There are no assumptions about the distribution of the predictor variables in any regression.  However, parameter estimates generally are only
+interpretable for nominal categories or numerical quantities.
+The coefficient is interpreted as the difference in the mean of Y, the outcome, for each one-unit difference in X, the predictor.  If the 
+predictor is categorical and dummy coded, a one-unit difference simply refers to switching from one category to the other.  If the predictor is 
+numerical, a one-unit difference should be meaningful.
+Ordinal predictor variables have to be treated as either nominal unordered categories or numerical.  In the former case, you are throwing away 
+information about the ordering.  In the latter, you’re making assumptions about the differences between the scale items.  If those distances can 
+be reasonably considered equal and meaningful, then it is reasonable to treat the predictor as numerical (i.e., if a one-unit change from 1 to 2 
+is roughly equivalent to a one-unit change from 3 to 4).
